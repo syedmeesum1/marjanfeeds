@@ -1,0 +1,142 @@
+/* Marjan Feeds - Karachi | Keyframes & Dynamic Animations */
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+    filter: blur(50px);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.08);
+    filter: blur(65px);
+  }
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scanlineBeam {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 200%;
+  }
+}
+
+@keyframes ledDigitPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(16, 185, 129, 1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes scaleInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes badgePing {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(5, 150, 105, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0);
+  }
+}
+
+/* Applied Animation Classes */
+.floating-element {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.floating-delayed {
+  animation: floatSlow 7s ease-in-out 2s infinite;
+}
+
+.ambient-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+.led-pulse {
+  animation: ledDigitPulse 0.4s ease-in-out infinite alternate !important;
+}
+
+.pulse-badge-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  animation: badgePing 2s infinite;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.scale-in {
+  animation: scaleInModal 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #0F172A 0%, #059669 35%, #D97706 70%, #0F172A 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+}
+
+[data-theme="dark"] .shimmer-text {
+  background: linear-gradient(90deg, #FFFFFF 0%, #00F29D 35%, #FFB703 70%, #FFFFFF 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
