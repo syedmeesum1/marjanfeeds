@@ -1,0 +1,918 @@
+/* ==========================================================================
+   Marjan Feeds Ultra-Luxury Glassmorphic Hero Design System (Light Background)
+   Swiss Industrial Precision: Clean off-white surface, deep forest emerald,
+   golden amber accents, frosted white glass cards, and floating 3D mill stage
+   ========================================================================== */
+
+/* Main Header Glassmorphic (Clean Light Mode Default) */
+.liquid-nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  padding: 16px 0;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+.liquid-nav-header.scrolled {
+  background: rgba(255, 255, 255, 0.98) !important;
+  padding: 12px 0;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.liquid-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Left: Clean Brand Logo */
+.liquid-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.liquid-brand-text {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0F172A;
+  white-space: nowrap;
+}
+
+.liquid-brand-text .text-emerald {
+  color: #059669;
+}
+
+.brand-badge-pill {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #059669;
+  background: rgba(5, 150, 105, 0.1);
+  border: 1px solid rgba(5, 150, 105, 0.25);
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+/* Center: Clean Nav Links */
+.liquid-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.liquid-nav-links .nav-link-item {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.liquid-nav-links .nav-link-item:hover {
+  color: #059669;
+}
+
+.chevron-svg {
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+  transition: transform 0.25s ease;
+}
+
+/* Nav Dropdown Menus */
+.nav-dropdown-wrap {
+  position: relative;
+}
+
+.nav-dropdown-wrap:hover .chevron-svg,
+.nav-dropdown-wrap:focus-within .chevron-svg {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12), inset 0 1px 1px rgba(255, 255, 255, 1);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-dropdown-wrap:hover .nav-dropdown-menu,
+.nav-dropdown-wrap:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.18s ease;
+}
+
+.dropdown-item:hover {
+  background: #F1F5F9;
+}
+
+.dropdown-item-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.dropdown-item-desc {
+  font-size: 11px;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+/* Right Nav Actions Cluster */
+.liquid-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Clean Pill Action Buttons */
+.btn-liquid-login {
+  background: rgba(15, 23, 42, 0.04);
+  color: #0F172A;
+  border: 1px solid #E2E8F0;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-liquid-login:hover {
+  color: #059669;
+  background: rgba(15, 23, 42, 0.08);
+  border-color: #CBD5E1;
+}
+
+/* High Contrast Forest Emerald Sign Up / Bulk Inquiry Button */
+.btn-liquid-signup {
+  background: #059669 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  padding: 9px 24px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 18px rgba(5, 150, 105, 0.35);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-liquid-signup:hover {
+  background: #047857 !important;
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(5, 150, 105, 0.48);
+}
+
+/* ==========================================================================
+   HERO SECTION STYLES (CLEAN LIGHT BACKGROUND)
+   ========================================================================== */
+
+.liquid-hero-section {
+  position: relative;
+  overflow: hidden;
+  background: #F8FAFC;
+  min-height: 100vh;
+  padding-top: 130px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Cosmic Canvas for subtle floating ambient particles */
+.cosmic-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ambient Watercolor Lights behind 3D Mill */
+.hero-ambient-lights {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ambient-nebula-amber {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 120px;
+  width: 750px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, rgba(245, 158, 11, 0.03) 50%, transparent 75%);
+  filter: blur(80px);
+  animation: nebulaPulse 10s ease-in-out infinite alternate;
+}
+
+.ambient-nebula-blue {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  width: 850px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(5, 150, 105, 0.11) 0%, rgba(16, 185, 129, 0.03) 55%, transparent 80%);
+  filter: blur(80px);
+}
+
+.ambient-nebula-core {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 300px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(5, 150, 105, 0.05) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+@keyframes nebulaPulse {
+  0% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.06);
+  }
+}
+
+/* Hero Container */
+.liquid-hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Location badge pill above title */
+.hero-location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.25);
+  padding: 5px 16px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
+}
+
+.hero-location-pill .pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #059669;
+  box-shadow: 0 0 8px #059669;
+  animation: pulseGlowDot 2s infinite;
+}
+
+@keyframes pulseGlowDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Centered Text Content */
+.liquid-hero-header {
+  text-align: center;
+  margin: 0 auto 18px;
+  max-width: 880px;
+  position: relative;
+  z-index: 5;
+}
+
+.liquid-hero-title {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(38px, 4.8vw, 62px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #0F172A;
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+
+.liquid-hero-title-accent {
+  background: linear-gradient(135deg, #059669 0%, #047857 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.liquid-hero-desc {
+  font-size: clamp(15px, 1.25vw, 17px);
+  color: #475569;
+  line-height: 1.65;
+  max-width: 640px;
+  margin: 0 auto 24px;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+/* Hero Pill Button CTA */
+.liquid-hero-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-liquid-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #059669 !important;
+  color: #FFFFFF !important;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding: 15px 36px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.32), 0 10px 30px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 6;
+}
+
+.btn-liquid-hero-pill:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: #047857 !important;
+  box-shadow: 0 8px 30px rgba(5, 150, 105, 0.45), 0 15px 40px rgba(15, 23, 42, 0.12);
+  color: #FFFFFF !important;
+}
+
+.btn-liquid-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  color: #0F172A;
+  border: 1px solid #CBD5E1;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 6;
+}
+
+.btn-liquid-secondary:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+  color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+/* Image switcher tabs for Marjan Feeds assets */
+.hero-image-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 14px auto 0;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.img-switch-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #475569;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.img-switch-pill:hover {
+  background: #F8FAFC;
+  border-color: #059669;
+  color: #059669;
+}
+
+.img-switch-pill.active {
+  background: rgba(5, 150, 105, 0.09);
+  border-color: #059669;
+  color: #059669;
+  box-shadow: 0 0 12px rgba(5, 150, 105, 0.2);
+}
+
+/* ==========================================================================
+   3D MARJAN FEEDS VISUAL CENTERPIECE STAGE
+   ========================================================================== */
+
+.liquid-orb-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  perspective: 1200px;
+  z-index: 4;
+}
+
+.liquid-orb-pod {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  border-radius: 28px 28px 0 0;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-bottom: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: #FFFFFF;
+}
+
+.liquid-orb-graphic {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.04) brightness(1.01);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-orb-stage:hover .liquid-orb-graphic {
+  transform: scale(1.015);
+}
+
+/* Subtle emerald curved rim light */
+.liquid-orb-rim-glow {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(5, 150, 105, 0.6) 25%, #059669 50%, rgba(5, 150, 105, 0.6) 75%, transparent);
+  box-shadow: 0 0 15px 3px rgba(5, 150, 105, 0.35);
+  pointer-events: none;
+}
+
+/* Seamless bottom fade */
+.liquid-orb-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, #F8FAFC 10%, rgba(248, 250, 252, 0.6) 45%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   FLOATING GLASSMORPHIC STAT CARDS (CLEAN LIGHT LUXURY)
+   ========================================================================== */
+
+.liquid-glass-card {
+  position: absolute;
+  z-index: 10;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 18px 22px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1), inset 0 1px 1px rgba(255, 255, 255, 1), 0 4px 12px rgba(15, 23, 42, 0.04);
+  color: #0F172A;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.liquid-glass-card:hover {
+  border-color: #059669;
+  box-shadow: 0 25px 55px rgba(15, 23, 42, 0.16), inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+/* Left Card Positioning */
+.liquid-glass-card.card-left {
+  left: clamp(15px, 8%, 90px);
+  bottom: clamp(110px, 44%, 230px);
+}
+
+/* Right Card Positioning */
+.liquid-glass-card.card-right {
+  right: clamp(15px, 8%, 90px);
+  bottom: clamp(80px, 32%, 180px);
+}
+
+/* Top Row: Label + Circular Arrow Icon */
+.glass-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.glass-card-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748B;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.glass-arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0F172A;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  padding: 0;
+}
+
+.glass-arrow-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.liquid-glass-card:hover .glass-arrow-btn {
+  transform: scale(1.1) rotate(6deg);
+  background: #059669;
+}
+
+/* Card Main Typography */
+.glass-card-heading {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0F172A;
+  margin: 0 0 10px;
+  letter-spacing: -0.015em;
+}
+
+.glass-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.glass-metric-sub {
+  font-size: 14px;
+  font-weight: 800;
+  color: #059669;
+  font-family: var(--font-mono);
+}
+
+/* Right Card Big Stat & Progress Track */
+.glass-stat-big {
+  font-family: var(--font-mono);
+  font-size: 34px;
+  font-weight: 800;
+  color: #D97706;
+  line-height: 1;
+  margin: 4px 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.glass-progress-track {
+  width: 100%;
+  height: 6px;
+  background: #E2E8F0;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.glass-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #059669, #D97706);
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(5, 150, 105, 0.4);
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Specular diagonal shine overlay */
+.glass-card-specular {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.6) 50%, transparent 60%);
+  pointer-events: none;
+  transition: left 0.7s ease;
+}
+
+.liquid-glass-card:hover .glass-card-specular {
+  left: 100%;
+}
+
+/* Floating Animations */
+@keyframes floatGlass1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-0.5deg);
+  }
+}
+
+@keyframes floatGlass2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.6deg);
+  }
+}
+
+.floating-glass-1 {
+  animation: floatGlass1 6.5s ease-in-out infinite;
+}
+
+.floating-glass-2 {
+  animation: floatGlass2 7.5s ease-in-out 1s infinite;
+}
+
+/* ==========================================================================
+   STATS STRIP REFINED FOR CLEAN LIGHT LUXURY
+   ========================================================================== */
+
+.liquid-stats-row {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06) !important;
+}
+
+.liquid-stats-row .stat-number {
+  color: #0F172A !important;
+}
+
+.liquid-stats-row .stat-label {
+  color: #334155 !important;
+}
+
+.liquid-stats-row .stat-sub {
+  color: #64748B !important;
+}
+
+/* ==========================================================================
+   OPTIONAL DARK MODE OVERRIDES (WHEN TOGGLED)
+   ========================================================================== */
+
+[data-theme="dark"] .liquid-nav-header {
+  background: rgba(7, 8, 13, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .liquid-brand-text {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .liquid-nav-links .nav-link-item {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="dark"] .liquid-nav-links .nav-link-item:hover {
+  color: #00F29D;
+}
+
+[data-theme="dark"] .nav-dropdown-menu {
+  background: rgba(13, 16, 26, 0.95);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .dropdown-item-title {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .btn-liquid-login {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .liquid-hero-section {
+  background: #07080D;
+}
+
+[data-theme="dark"] .liquid-hero-title {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .liquid-hero-desc {
+  color: rgba(226, 232, 240, 0.75);
+}
+
+[data-theme="dark"] .btn-liquid-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .img-switch-pill {
+  background: rgba(18, 22, 34, 0.7);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="dark"] .img-switch-pill.active {
+  background: rgba(0, 242, 157, 0.14);
+  border-color: #00F29D;
+  color: #00F29D;
+}
+
+[data-theme="dark"] .liquid-orb-pod {
+  background: #0B0E17;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .liquid-orb-bottom-fade {
+  background: linear-gradient(to top, #07080D 10%, rgba(7, 8, 13, 0.7) 45%, transparent 100%);
+}
+
+[data-theme="dark"] .liquid-glass-card {
+  background: rgba(18, 20, 30, 0.65);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .glass-card-tag {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+[data-theme="dark"] .glass-arrow-btn {
+  background: #FFFFFF;
+  color: #07080D;
+}
+
+[data-theme="dark"] .glass-card-heading {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .glass-progress-track {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .liquid-stats-row {
+  background: rgba(14, 18, 28, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .liquid-stats-row .stat-number {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .liquid-stats-row .stat-label {
+  color: #CBD5E1 !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN FOR HERO
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .liquid-nav-links {
+    gap: 20px;
+  }
+  
+  .liquid-glass-card.card-left {
+    left: 2%;
+    bottom: 30%;
+    width: 220px;
+  }
+  
+  .liquid-glass-card.card-right {
+    right: 2%;
+    bottom: 20%;
+    width: 220px;
+  }
+}
+
+@media (max-width: 868px) {
+  .liquid-nav-links {
+    display: none;
+  }
+  
+  .liquid-hero-section {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+  
+  .liquid-hero-title {
+    font-size: 36px;
+  }
+  
+  .liquid-hero-desc {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  
+  .liquid-glass-card {
+    position: relative;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100%;
+    max-width: 300px;
+    margin: 12px auto;
+  }
+  
+  .liquid-orb-stage {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .liquid-orb-pod {
+    margin-bottom: 20px;
+  }
+}

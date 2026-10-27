@@ -16,8 +16,9 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/liquid-hero.css">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300F29D' stroke-width='2'><path d='M7 20h10'/><path d='M10 20c5.5-2.5.8-6.4 3-10'/><path d='M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z'/><path d='M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4.2.9-4.9 2z'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23059669' stroke-width='2'><path d='M7 20h10'/><path d='M10 20c5.5-2.5.8-6.4 3-10'/><path d='M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z'/><path d='M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4.2.9-4.9 2z'/></svg>">
 </head>
 <body>
 
@@ -31,82 +32,69 @@
     <div class="orb orb-3 ambient-glow"></div>
   </div>
 
-  <!-- Header Navigation -->
-  <header class="main-header" id="main-header">
-    <div class="container nav-wrap">
-      <a href="#" class="brand-logo" aria-label="Marjan Feeds Karachi Home">
-        <div class="logo-symbol" aria-hidden="true">M</div>
-        <div>
-          <div class="brand-name">
-            <span>MARJAN</span>
-            <span class="text-emerald">FEEDS</span>
-          </div>
-          <div class="brand-location">KARACHI INDUSTRIAL MILL</div>
-        </div>
+  <!-- Header Navigation (Ultra-Luxury Glassmorphic Design for Marjan Feeds) -->
+  <header class="main-header liquid-nav-header" id="main-header">
+    <div class="container nav-wrap liquid-nav-container">
+      <!-- Left: Marjan Feeds Brand Wordmark -->
+      <a href="#" class="brand-logo liquid-brand-logo" id="brand-logo-link" aria-label="Marjan Feeds Karachi Home">
+        <span class="liquid-brand-text" id="brand-name-display">MARJAN <span class="text-emerald">FEEDS</span></span>
+        <span class="brand-badge-pill" id="brand-sub-badge">KARACHI MILL</span>
       </a>
 
+      <!-- Center: Main Navigation Links with Dropdowns (ENG/Urdu removed) -->
       <nav class="main-nav" aria-label="Main Navigation">
-        <ul class="nav-links" id="main-nav-links">
-          <li><a href="#about-mill">About</a></li>
-          <li><a href="#feed-catalog">Feed Catalog</a></li>
-          <li><a href="#fcr-calculator">FCR Calculator</a></li>
-          <li><a href="#quality-lab">QC Lab</a></li>
-          <li><a href="#contact-location">Contact</a></li>
-          <li class="mobile-drawer-extra">
-            <div class="mobile-drawer-actions">
-              <a href="tel:+922136980967" class="btn btn-sm btn-primary">
-                <span class="ui-icon" style="width: 14px; height: 14px;"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
-                <span>Call Mill: +92 21 36980967</span>
+        <ul class="nav-links liquid-nav-links" id="main-nav-links">
+          <li><a href="#about-mill" class="nav-link-item">About Mill</a></li>
+          <li class="nav-dropdown-wrap">
+            <a href="#feed-catalog" class="nav-link-item dropdown-trigger">
+              <span>Feed Catalog</span>
+              <svg class="chevron-svg" viewBox="0 0 24 24" width="14" height="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#feed-catalog" class="dropdown-item">
+                <span class="dropdown-item-title">Commercial Broiler Rations</span>
+                <span class="dropdown-item-desc">Starter (MF-BS-101), Grower, Finisher</span>
               </a>
-              <button class="btn btn-sm btn-outline open-proposal-btn">
-                <span class="ui-icon" style="width: 14px; height: 14px;"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></span>
-                <span>Client Proposal Document</span>
-              </button>
+              <a href="#feed-catalog" class="dropdown-item">
+                <span class="dropdown-item-title">High-Yield Layer Mash</span>
+                <span class="dropdown-item-desc">16.5% CP egg production rations</span>
+              </a>
+              <a href="#feed-catalog" class="dropdown-item">
+                <span class="dropdown-item-title">Super Dairy Wanda 22%</span>
+                <span class="dropdown-item-desc">High-protein cattle milk yield booster</span>
+              </a>
+              <a href="#commodity-ticker" class="dropdown-item">
+                <span class="dropdown-item-title">Mill Commodity Intake</span>
+                <span class="dropdown-item-desc">Maize, Soy, Canola live mill rates</span>
+              </a>
             </div>
           </li>
+          <li><a href="#fcr-calculator" class="nav-link-item">FCR Calculator</a></li>
+          <li><a href="#quality-lab" class="nav-link-item">QC Lab</a></li>
+          <li><a href="#contact-location" class="nav-link-item">Contact</a></li>
         </ul>
         <div class="nav-drawer-backdrop" id="nav-drawer-backdrop"></div>
       </nav>
 
-      <div class="nav-actions">
-        <!-- Direct Phone & Quick Copy Cluster -->
-        <div class="phone-action-cluster">
-          <a href="tel:+922136980967" class="ptcl-pill" title="Call PTCL Landline (Call Only)">
-            <span class="ui-icon" style="width: 14px; height: 14px;">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </span>
-            <span class="font-mono">+92 21 36980967</span>
-          </a>
-          <button class="copy-phone-btn" id="copy-phone-nav" title="Copy PTCL Phone Number" aria-label="Copy PTCL Phone Number">
-            <span class="ui-icon" style="width: 14px; height: 14px;">
-              <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            </span>
-          </button>
-        </div>
+      <!-- Right: Actions Cluster (PTCL Direct + Proposal + Bulk Inquiry Pill) -->
+      <div class="nav-actions liquid-nav-actions">
+        <!-- Direct Phone Button -->
+        <a href="tel:+922136980967" class="btn-liquid-login" title="Call PTCL Landline: +92 21 36980967" style="display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span class="font-mono">+92 21 36980967</span>
+        </a>
 
-        <!-- Light/Dark Mode Switcher -->
-        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
-          <span class="ui-icon" id="theme-icon" style="width: 18px; height: 18px;">
-            <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
-          </span>
+        <!-- Proposal Document -->
+        <button class="btn-liquid-login open-proposal-btn" id="open-proposal-nav-btn">
+          Proposal
         </button>
 
-        <button class="btn btn-sm btn-outline open-proposal-btn" id="open-proposal-nav-btn">
-          <span class="ui-icon" style="width: 14px; height: 14px;">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          </span>
-          <span>Client Proposal</span>
+        <!-- Pure White Capsule Bulk Inquiry Button -->
+        <button class="btn-liquid-signup" id="nav-signup-btn" onclick="openQuoteModal('Broiler Starter')">
+          Bulk Inquiry
         </button>
 
-        <button class="btn btn-sm btn-primary nav-inquiry-btn" onclick="openQuoteModal('Broiler Starter')">
-          <span class="ui-icon" style="width: 14px; height: 14px;">
-            <svg viewBox="0 0 24 24"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline></svg>
-          </span>
-          <span class="inquiry-text-full">Bulk Inquiry</span>
-          <span class="inquiry-text-short">Inquire</span>
-        </button>
-
-        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="main-nav-links">
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
           <span class="ui-icon" style="width: 20px; height: 20px;">
             <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </span>
@@ -116,107 +104,108 @@
   </header>
 
   <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-text-col">
-          <div class="hero-sub-badge floating-element">
-            <span class="pulse-badge-dot" aria-hidden="true"></span>
-            <span class="ui-icon" style="width: 14px; height: 14px;">
-              <svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            </span>
+    <!-- Ultra-Sleek Glassmorphic Hero Section (Marjan Feeds Official Architecture) -->
+    <section class="liquid-hero-section" id="hero">
+      <!-- Cosmic Interactive Starfield Canvas -->
+      <canvas id="cosmic-starfield-canvas" class="cosmic-canvas" aria-hidden="true"></canvas>
+
+      <!-- Ambient Nebula Glows behind 3D Mill -->
+      <div class="hero-ambient-lights" aria-hidden="true">
+        <div class="ambient-nebula-amber"></div>
+        <div class="ambient-nebula-blue"></div>
+        <div class="ambient-nebula-core"></div>
+      </div>
+
+      <div class="container liquid-hero-container">
+        <!-- Hero Header Centered Text -->
+        <div class="liquid-hero-header">
+          <!-- Location Badge Pill -->
+          <div class="hero-location-pill">
+            <span class="pulse-dot"></span>
             <span>Plot 45/4, Sector 12-D, North Karachi Industrial Area</span>
           </div>
 
-          <h1 class="hero-title">
-            Precision Nutrition For <span class="shimmer-text">Poultry & Livestock</span> Excellence
+          <h1 class="liquid-hero-title" id="liquid-hero-title">
+            Elevate Your<br>
+            <span class="liquid-hero-title-accent">Poultry & Feed Yield</span>
           </h1>
 
-          <p class="hero-desc">
+          <p class="liquid-hero-desc" id="liquid-hero-desc">
             Karachi's leading commercial feed manufacturing facility delivering scientifically balanced broiler rations, high-yield layer mashes, and 22% protein dairy wanda. Powered by state-of-the-art weighbridge scale automation and dedicated dealer ledger ERP.
           </p>
 
-          <div class="hero-actions">
-            <a href="#feed-catalog" class="btn btn-primary">
-              <span class="ui-icon" style="width: 16px; height: 16px;">
-                <svg viewBox="0 0 24 24"><path d="M7 20h10"></path><path d="M10 20c5.5-2.5.8-6.4 3-10"></path><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"></path><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4.2.9-4.9 2z"></path></svg>
-              </span>
-              <span>Explore Feed Catalog</span>
+          <div class="liquid-hero-cta">
+            <a href="#feed-catalog" class="btn-liquid-hero-pill" id="hero-cta-btn">
+              Explore Feed Formulations
             </a>
-
-            <a href="#fcr-calculator" class="btn btn-outline">
-              <span class="ui-icon" style="width: 16px; height: 16px;">
-                <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
-              </span>
-              <span>FCR & ROI Calculator</span>
+            <a href="#fcr-calculator" class="btn-liquid-secondary" id="hero-sec-btn">
+              FCR & ROI Calculator
             </a>
-
-            <button class="btn btn-gold open-proposal-btn">
-              <span class="ui-icon" style="width: 16px; height: 16px;">
-                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-              </span>
-              <span>View Proposal Doc</span>
-            </button>
           </div>
 
-          <div class="hero-trust-bar">
-            <div class="rating-chip">
-              <div class="stars-svg" aria-label="4.2 stars rating">
-                <span class="ui-icon" style="width: 16px; height: 16px;"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
-                <span class="ui-icon" style="width: 16px; height: 16px;"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
-                <span class="ui-icon" style="width: 16px; height: 16px;"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
-                <span class="ui-icon" style="width: 16px; height: 16px;"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
-                <span class="ui-icon" style="width: 16px; height: 16px;"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
-              </div>
-              <strong>4.2 ★</strong>
-              <span class="text-muted">(80 Verified Reviews)</span>
-            </div>
-            <div class="enic-badge">
-              <span class="ui-icon" style="width: 14px; height: 14px;"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
-              <span>enic.pk Directory Verified Business</span>
-            </div>
+          <!-- Interactive Marjan Feeds Image Switcher Tabs -->
+          <div class="hero-image-switcher" id="hero-image-switcher" aria-label="Select Marjan Feeds Visual">
+            <button class="img-switch-pill active" data-img="assets/images/marjan_feed_mill.jpg">
+              <span>🏢 Facility Aerial View</span>
+            </button>
+            <button class="img-switch-pill" data-img="assets/images/marjan_feeds_showcase.jpg">
+              <span>📦 Feed Packs & Wanda</span>
+            </button>
+            <button class="img-switch-pill" data-img="assets/images/marjan_mill_dark.jpg">
+              <span>🏭 Mill Complex</span>
+            </button>
           </div>
         </div>
 
-        <!-- Hero Visual Banner with Zero CLS Protection -->
-        <div class="hero-visual-col">
-          <div class="hero-visual-card">
-            <div class="hero-main-img-wrap">
-              <img src="assets/images/marjan_feed_mill.jpg" alt="Marjan Feeds Industrial Mill Facility in North Karachi" width="1280" height="800" decoding="async">
-              <div class="img-overlay-glow"></div>
-            </div>
+        <!-- 3D Marjan Feeds Visual Centerpiece Stage with Floating Glass Cards -->
+        <div class="liquid-orb-stage" id="liquid-orb-stage">
+          <!-- Central Marjan Feeds Visual -->
+          <div class="liquid-orb-pod">
+            <img src="assets/images/marjan_feed_mill.jpg" alt="Marjan Feeds Modern Mill Facility in North Karachi" class="liquid-orb-graphic" id="liquid-orb-image" width="1280" height="720" fetchpriority="high">
+            <div class="liquid-orb-rim-glow" aria-hidden="true"></div>
+            <div class="liquid-orb-bottom-fade" aria-hidden="true"></div>
+          </div>
 
-            <!-- Floating Hero Badges (Lucide SVGs) -->
-            <div class="floating-hero-pill pill-1 floating-element">
-              <div class="pill-icon">
-                <span class="ui-icon" style="width: 20px; height: 20px;">
-                  <svg viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg>
-                </span>
-              </div>
-              <div class="pill-content">
-                <h5>Weighbridge Connected</h5>
-                <p>Digital Gross & Tare Auto-Capture</p>
+          <!-- Floating Glassmorphic Card 1 (Left: Broiler FCR) -->
+          <div class="liquid-glass-card card-left floating-glass-1" id="glass-card-left" onclick="scrollToCalculator()">
+            <div class="glass-card-top">
+              <span class="glass-card-tag" id="card-left-tag">Broiler Performance</span>
+              <button class="glass-arrow-btn" aria-label="Check Broiler FCR Calculator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </button>
+            </div>
+            <div class="glass-card-main">
+              <h3 class="glass-card-heading" id="card-left-heading">Target Broiler<br>FCR Excellence</h3>
+              <div class="glass-card-meta">
+                <span class="glass-metric-sub" id="card-left-metric" style="color: #00F29D; font-weight: 700;">1.48 FCR</span>
               </div>
             </div>
+            <div class="glass-card-specular" aria-hidden="true"></div>
+          </div>
 
-            <div class="floating-hero-pill pill-2 floating-delayed">
-              <div class="pill-icon">
-                <span class="ui-icon" style="width: 20px; height: 20px;">
-                  <svg viewBox="0 0 24 24"><path d="M10 2v7.31"></path><path d="M14 9.3V1.99"></path><path d="M8.5 2h7"></path><path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path><path d="M5.52 16h12.96"></path></svg>
-                </span>
-              </div>
-              <div class="pill-content">
-                <h5>NIR Lab Certified</h5>
-                <p>Guaranteed 22.5% Protein Formula</p>
+          <!-- Floating Glassmorphic Card 2 (Right: Dairy Wanda 22% Protein) -->
+          <div class="liquid-glass-card card-right floating-glass-2" id="glass-card-right" onclick="scrollToCatalog()">
+            <div class="glass-card-top">
+              <span class="glass-card-tag" id="card-right-tag">Super Dairy Wanda</span>
+              <button class="glass-arrow-btn" aria-label="Explore Dairy Wanda Formulations">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </button>
+            </div>
+            <div class="glass-card-main">
+              <div class="glass-stat-big" id="card-right-stat" style="color: #FFB703;">22.5%</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.7); margin-bottom: 8px;">Guaranteed Crude Protein</div>
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" id="card-right-bar" style="width: 96%; background: linear-gradient(90deg, #00F29D, #FFB703);"></div>
               </div>
             </div>
+            <div class="glass-card-specular" aria-hidden="true"></div>
           </div>
         </div>
       </div>
 
-      <!-- Animated Stats Strip -->
+      <!-- Animated Stats Strip (Refined for Dark Glass Luxury) -->
       <div class="container hero-stats-strip" id="about-mill">
-        <div class="stats-card-row">
+        <div class="stats-card-row liquid-stats-row">
           <div class="stat-item">
             <div class="stat-number font-mono" data-target="400" data-suffix="+ MT">0 MT</div>
             <div class="stat-label">Daily Milling Capacity</div>
@@ -720,5 +709,6 @@
   <script src="js/catalog-data.js"></script>
   <script src="js/fcr-calculator.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/liquid-hero.js"></script>
 </body>
 </html>

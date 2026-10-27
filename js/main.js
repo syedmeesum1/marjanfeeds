@@ -655,15 +655,10 @@ function initThemeToggle() {
   const sunSVG = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
   const moonSVG = `<svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>`;
 
-  // Default to light mode unless dark is explicitly requested
-  const savedTheme = localStorage.getItem('marjan_theme') || 'light';
-  if (savedTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    iconWrap.innerHTML = sunSVG;
-  } else {
-    document.documentElement.removeAttribute('data-theme');
-    iconWrap.innerHTML = moonSVG;
-  }
+  // Default to clean crisp light mode across whole website as requested
+  localStorage.setItem('marjan_theme', 'light');
+  document.documentElement.removeAttribute('data-theme');
+  iconWrap.innerHTML = moonSVG;
 
   toggleBtn.addEventListener('click', () => {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
